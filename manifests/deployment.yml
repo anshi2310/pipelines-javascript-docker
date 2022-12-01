@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: anshipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: anshipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: anshipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: anshipipelinesjavascriptdocker 
+          image: anshitaacr.azurecr.io/anshipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
